@@ -66,7 +66,7 @@ jobs:
             -Dsonar.host.url=http://localhost:9000 \
             -Dsonar.qualitygate.wait=true \
             -Dsonar.login=admin \
-            -Dsonar.password=admin
+            -Dsonar.password=adriandiaz7
   deploy:
     needs: qa
     runs-on: ubuntu-latest
