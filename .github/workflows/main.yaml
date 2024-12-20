@@ -3,10 +3,23 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestm 
     steps:
-      - name: empaquetado
-        run: echo "empaquetado"
+      - name: Descargar repositorio
+        uses: actions/checkout@v2
+      - name: Instalar JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+          distribution: "adopt"
+      - name: Construir con Maven
+        run: mvn clean package -DskipTests
+      - name: Guardar paquete generado para el trabajo de despliegue
+        uses: actions/upload-artifact@v4
+        with:
+          name: moviecards-java
+          path: "${{ github.workspace }}/target/*.jar"
+
   test:
     needs: build
     runs-on: ubuntu-latest
