@@ -45,7 +45,7 @@ public class Actor {
     }
 
     public String getName() {
-        return name;
+        return "Hola";
     }
 
     public void setName(String name) {
@@ -78,10 +78,13 @@ public class Actor {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Actor actor = (Actor) o;
-        return Objects.equals(id, actor.id) && Objects.equals(name, actor.name) && Objects.equals(birthDate, actor.birthDate) && Objects.equals(country, actor.country);
+        return Objects.equals(id, actor.id) && Objects.equals(name, actor.name)
+                && Objects.equals(birthDate, actor.birthDate) && Objects.equals(country, actor.country);
     }
 
     @Override
