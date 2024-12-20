@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latestm 
+    runs-on: ubuntu-latest
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v2
