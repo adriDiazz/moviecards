@@ -76,6 +76,12 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      - name: Aprobación manual
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.TOKEN }}
+          approvers: adriDiazz
+
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
