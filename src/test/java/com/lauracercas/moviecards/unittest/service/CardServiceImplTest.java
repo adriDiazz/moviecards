@@ -33,11 +33,10 @@ class CardServiceImplTest {
     private CardServiceImpl sut;
     private AutoCloseable closeable;
 
-
     @BeforeEach
     public void setUp() {
         closeable = openMocks(this);
-        sut = new CardServiceImpl(actorService, movieService);
+        // sut = new CardServiceImpl(actorService, movieService);
     }
 
     @AfterEach
