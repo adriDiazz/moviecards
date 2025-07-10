@@ -22,7 +22,7 @@ public class ActorServiceImpl implements ActorService {
 
     // private final ActorJPA actorJPA;
 
-    String url = "https://moviecards-service-adriDiazz.azurewebsites.net/actors";
+    String url = "https://moviecards-service-adriandiaz.azurewebsites.net/actors";
 
     // public ActorServiceImpl(ActorJPA actorJPA) {
     // this.actorJPA = actorJPA;
