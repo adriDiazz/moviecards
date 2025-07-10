@@ -23,6 +23,9 @@ public class Actor {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthDate;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date deadDate;
+
     private String country;
 
     @ManyToMany(mappedBy = "actors")
@@ -34,6 +37,14 @@ public class Actor {
     public Actor(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Date getDeadDate() {
+        return deadDate;
+    }
+
+    public void setDeadDate(Date deadDate) {
+        this.deadDate = deadDate;
     }
 
     public Integer getId() {
