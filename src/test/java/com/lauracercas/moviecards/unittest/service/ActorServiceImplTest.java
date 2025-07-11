@@ -65,7 +65,7 @@ class ActorServiceImplTest {
         Actor actor = new Actor();
         actor.setId(1);
         actor.setName("Sample Actor");
-        actor.setDeadDate(new Date(1900, 5 - 1, 15, 10, 30, 0));
+        actor.setDeadDate(new Date());
 
         when(template.getForObject(anyString(), any())).thenReturn(actor);
 
