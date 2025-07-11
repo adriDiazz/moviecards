@@ -16,6 +16,7 @@ import org.mockito.Mock;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +37,7 @@ class CardServiceImplTest {
     @Mock
     private RestTemplate template;
 
-//    private CardServiceImpl sut;
+    // private CardServiceImpl sut;
     @InjectMocks
     private CardServiceImpl sut = new CardServiceImpl();
     private AutoCloseable closeable;
@@ -44,7 +45,7 @@ class CardServiceImplTest {
     @BeforeEach
     public void setUp() {
         closeable = openMocks(this);
-//        sut = new CardServiceImpl(actorService, movieService);
+        // sut = new CardServiceImpl(actorService, movieService);
     }
 
     @AfterEach
@@ -61,6 +62,8 @@ class CardServiceImplTest {
         Actor actor = new Actor();
         actor.setId(1);
         actor.setName("Sample Actor");
+        actor.setDeadDate(new Date(1900, 5 - 1, 15, 10, 30, 0));
+
         Movie movie = new Movie();
         movie.setId(2);
         movie.setTitle("Sample Movie");
@@ -98,6 +101,7 @@ class CardServiceImplTest {
         Actor actor = new Actor();
         actor.setId(1);
         actor.setName("John Doe");
+        actor.setDeadDate(new Date(1900, 5 - 1, 15, 10, 30, 0));
 
         Movie movie = new Movie();
         movie.setId(2);
