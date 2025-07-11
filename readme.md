@@ -126,9 +126,11 @@ stage:
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPREPROFILE }}
 ```
 
+<img src="imagenJobs.png" alt="Description" width="500" height="300">
+
 Para la creacion de este entorno se ha tenido que crear un nuevo servicio 'appService' en azure, posterioremente se obtiene el secreto AZUREAPPSERVICE_PUBLISHPREPROFILE, para permitir el despliegue desde nuestro nuevo job.
 
-<img src="imagenJobs.png" alt="Description" width="500" height="300">
+<img src="imagenAzure.png" alt="Description" width="500" height="300">
 
 ## 5. Gestión del proyecto
 
