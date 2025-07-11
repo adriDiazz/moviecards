@@ -62,7 +62,7 @@ class CardServiceImplTest {
         Actor actor = new Actor();
         actor.setId(1);
         actor.setName("Sample Actor");
-        actor.setDeadDate(new Date(1900, 5 - 1, 15, 10, 30, 0));
+        actor.setDeadDate(new Date());
 
         Movie movie = new Movie();
         movie.setId(2);
@@ -101,7 +101,7 @@ class CardServiceImplTest {
         Actor actor = new Actor();
         actor.setId(1);
         actor.setName("John Doe");
-        actor.setDeadDate(new Date(1900, 5 - 1, 15, 10, 30, 0));
+        actor.setDeadDate(new Date());
 
         Movie movie = new Movie();
         movie.setId(2);
